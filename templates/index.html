@@ -4,7 +4,10 @@
   {% block title %}Home{% endblock %}
 
   {% block body %}
-  <h1>Hello, {{request.user.username}}!
+  <h1>Hello, {{request.user.username}}!    {{request.user.email}}  {{request.user.first_name}}  {{request.user.last_name}}
+    
+                 
+    
 
     {% if user.is_authenticated %}
     <a href="{% url 'func_logout' %}">Logout</a>
